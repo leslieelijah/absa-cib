@@ -7,16 +7,9 @@ import { HomeService } from '../services/home.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public selectedCurrency: any;
-  public currencies: any[];
 
-  constructor(private homeService: HomeService) {
-    this.currencies = homeService.currencies;
-   }
+  constructor() {}
 
-  ngOnInit() {
-    this.selectedCurrency = this.currencies.find(x => x.usd).usd;
-    console.log(this.currencies);
-  }
+  ngOnInit() {}
 
 }

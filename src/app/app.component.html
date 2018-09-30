@@ -17,15 +17,13 @@
                     <a class="nav-link" href="#">CONTACT</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                       CURRENCY
-                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <select>
-                          <option disabled=true>Currency</option>
-                          <option [value]="" (change)="onSelectOfCurrency()">{{selectedCurrency}}</option>
-                        </select>
-                    </div>
+                    <button id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        USD
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" (ngModel)="selectedCurrency">
+                        <li *ngFor="let money of currencies" (change)="onSelectOfCurrency()">{{money.name}}</li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -42,32 +40,36 @@
     </nav>
     <!--/ Main Nav /-->
 
-    <div class="row">
+    <div class="row second-nav-menu">
+        <div class="col-2">
+            <h2>CANVAS</h2>
+        </div>
 
         <!-- Tabs -->
-        <nav class="second-nav-menu col-6 offset-6">
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
-                    <span class="far fa-home"></span> Home
-                </a>
-                <a class="nav-item nav-link" id="nav-flights-tab" data-toggle="tab" href="#nav-flights" role="tab" aria-controls="nav-flights" aria-selected="false">
-                    <span class="far fa-plane"></span> Flights
-                </a>
-                <a class="nav-item nav-link" id="nav-hotel-tab" data-toggle="tab" href="#nav-hotel" role="tab" aria-controls="nav-hotel" aria-selected="false">
-                    <span class="far fa-hotel"></span> Hotels
-                </a>
-                <a class="nav-item nav-link" id="nav-holidays-tab" data-toggle="tab" href="#nav-holidays" role="tab" aria-controls="nav-holidays" aria-selected="false">
-                    <span class="far fa-building"></span> Holidays
-                </a>
-                <a class="nav-item nav-link" id="nav-blog-tab" data-toggle="tab" href="#nav-blog" role="tab" aria-controls="nav-blog" aria-selected="false">
-                    <span class="fal fa-pencil"></span> Blog
-                </a>
-                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
-                    <span class="col fas fa-phone"></span>1800 105 2541
-                </a>
-            </div>
-        </nav>
-
+        <div class="col-8 offset-lg-2">
+            <nav>
+                <div class="nav nav-tabs pull-right" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
+                        <span class="far fa-home"></span> Home
+                    </a>
+                    <a class="nav-item nav-link" id="nav-flights-tab" data-toggle="tab" href="#nav-flights" role="tab" aria-controls="nav-flights" aria-selected="false">
+                        <span class="far fa-plane"></span> Flights
+                    </a>
+                    <a class="nav-item nav-link" id="nav-hotel-tab" data-toggle="tab" href="#nav-hotel" role="tab" aria-controls="nav-hotel" aria-selected="false">
+                        <span class="far fa-hotel"></span> Hotels
+                    </a>
+                    <a class="nav-item nav-link" id="nav-holidays-tab" data-toggle="tab" href="#nav-holidays" role="tab" aria-controls="nav-holidays" aria-selected="false">
+                        <span class="far fa-building"></span> Holidays
+                    </a>
+                    <a class="nav-item nav-link" id="nav-blog-tab" data-toggle="tab" href="#nav-blog" role="tab" aria-controls="nav-blog" aria-selected="false">
+                        <span class="fal fa-pencil"></span> Blog
+                    </a>
+                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                        <span class="col fas fa-phone"></span>1800 105 2541
+                    </a>
+                </div>
+            </nav>
+        </div>
 
         <div class="tab-content col-12" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -79,9 +81,15 @@
             <div class="tab-pane fade" id="nav-hotel" role="tabpanel" aria-labelledby="nav-hotel-tab">
                 <app-hotels></app-hotels>
             </div>
+            <div class="tab-pane fade show" id="nav-holidays" role="tabpanel" aria-labelledby="nav-holidays-tab">
+                Holidays
+            </div>
+            <div class="tab-pane fade" id="nav-blog" role="tabpanel" aria-labelledby="nav-blog-tab">
+                Blog
+            </div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                Contact number
+            </div>
         </div>
-
-
-
     </div>
 </div>

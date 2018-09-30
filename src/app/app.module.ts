@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeService } from './services/home.service';
+import { FlightsComponent } from './flights/flights.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    FlightsComponent
   ],
   imports: [
     BrowserModule

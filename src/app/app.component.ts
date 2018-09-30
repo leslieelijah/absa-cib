@@ -9,19 +9,18 @@ import { HomeService } from './services/home.service';
 export class AppComponent implements OnInit {
 
   public selectedCurrency: any;
-  public currencies: any[];
+  public currencies: any;
 
-  constructor(private homeService: HomeService) {
-    this.currencies = homeService.currencies;
-  }
+  constructor(private homeService: HomeService) {  }
 
   ngOnInit() {
     this.onSelectOfCurrency();
   }
 
   public onSelectOfCurrency() {
-    this.selectedCurrency = this.currencies.find(x => x.usd).usd;
-    console.log(this.currencies);
+    this.currencies = this.homeService.currencies.currency;
+    this.selectedCurrency = this.currencies.find(x => x.name).name;
+    console.log(this.selectedCurrency);
   }
 
 }

@@ -43,3 +43,20 @@
     color: #FFF;
     font-family: fontAwesome;
 }
+
+.save {
+    padding: 0px 10px 3px;
+    font-size: 11px;
+    color: #FFF;
+    background-color: #ac4541;
+    margin: 0px;
+}
+
+.nav-tabs .nav-link {
+    border-right: 1px solid #FFF;
+    color: #FFF;
+}
+
+.tab-content {
+    padding: 20px;
+}
