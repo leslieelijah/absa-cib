@@ -1,7 +1,23 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-12">
-      Home
+<div class="row">
+    <nav class="col-6 offset-1" id="flights">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
+                <span class="far fa-plane"></span> Flights
+            </a>
+            <a class="nav-item nav-link" id="nav-hotel-tab" data-toggle="tab" href="#nav-hotel" role="tab" aria-controls="nav-hotel" aria-selected="false">
+                <span class="far fa-hotel"></span> Hotels
+            </a>
+            <a class="nav-item nav-link" id="nav-flights-tab" data-toggle="tab" href="#nav-flights" role="tab" aria-controls="nav-flights" aria-selected="false">
+                Flights + Hotels <button class="save">save</button>
+            </a>
+            <a class="nav-item nav-link" id="nav-holidays-tab" data-toggle="tab" href="#nav-holidays" role="tab" aria-controls="nav-holidays" aria-selected="false">
+                <span class="far fa-building"></span> Holidays
+            </a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
     </div>
-  </div>
 </div>

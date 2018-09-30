@@ -1,34 +1,87 @@
 <div id="cib-wrap" class="container-fluid">
-  <div class="row">
-    <div class="col-lg-12">
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse col-10" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       CURRENCY
+                     </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <select>
+                          <option disabled=true>Currency</option>
+                          <option [value]="" (change)="onSelectOfCurrency()">{{selectedCurrency}}</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Social section -->
+        <div class="col-2">
+            <a href="#"><span class="col fab fa-facebook-f"></span></a>
+            <a href="#"><span class="col fab fa-twitter"></span></a>
+            <a href="#"><span class="col fab fa-pinterest-p"></span></a>
+            <a href="#"><span class="col fab fa-instagram"></span></a>
+            <a href="#"><span class="col fas fa-phone"></span></a>
+            <a href="#"><span class="col fal fa-envelope"></span></a>
+        </div>
+    </nav>
+    <!--/ Main Nav /-->
+
+    <div class="row">
+
+        <!-- Tabs -->
+        <nav class="second-nav-menu col-6 offset-6">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
+                    <span class="far fa-home"></span> Home
+                </a>
+                <a class="nav-item nav-link" id="nav-flights-tab" data-toggle="tab" href="#nav-flights" role="tab" aria-controls="nav-flights" aria-selected="false">
+                    <span class="far fa-plane"></span> Flights
+                </a>
+                <a class="nav-item nav-link" id="nav-hotel-tab" data-toggle="tab" href="#nav-hotel" role="tab" aria-controls="nav-hotel" aria-selected="false">
+                    <span class="far fa-hotel"></span> Hotels
+                </a>
+                <a class="nav-item nav-link" id="nav-holidays-tab" data-toggle="tab" href="#nav-holidays" role="tab" aria-controls="nav-holidays" aria-selected="false">
+                    <span class="far fa-building"></span> Holidays
+                </a>
+                <a class="nav-item nav-link" id="nav-blog-tab" data-toggle="tab" href="#nav-blog" role="tab" aria-controls="nav-blog" aria-selected="false">
+                    <span class="fal fa-pencil"></span> Blog
+                </a>
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                    <span class="col fas fa-phone"></span>1800 105 2541
+                </a>
+            </div>
+        </nav>
 
 
-
-      <!-- Tabs -->
-      <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-        <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-        <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-      </ul>
-      
-      <div class="tab-content">
-        <div id="home" class="tab-pane fade in active">
-          <h3>HOME</h3>
-          <p>Some content.</p>
+        <div class="tab-content col-12" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <app-home></app-home>
+            </div>
+            <div class="tab-pane fade" id="nav-flights" role="tabpanel" aria-labelledby="nav-flights-tab">
+                <app-flights></app-flights>
+            </div>
+            <div class="tab-pane fade" id="nav-hotel" role="tabpanel" aria-labelledby="nav-hotel-tab">
+                <app-hotels></app-hotels>
+            </div>
         </div>
-        <div id="menu1" class="tab-pane fade">
-          <h3>Menu 1</h3>
-          <p>Some content in menu 1.</p>
-        </div>
-        <div id="menu2" class="tab-pane fade">
-          <h3>Menu 2</h3>
-          <p>Some content in menu 2.</p>
-        </div>
-      </div>
 
 
 
     </div>
-  </div>
 </div>
-

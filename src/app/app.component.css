@@ -1,0 +1,59 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg-light {
+    background-color: transparent !important;
+}
+
+#cib-wrap {
+    background-image: url('/src/assets/images/absa-cib-banner.jpg');
+    height: 500px;
+    background-size: cover !important;
+    background-repeat: no-repeat!important;
+    background-position: right top!important;
+    transition: 0s linear !important;
+}
+
+.bg-light {
+    border-bottom: 1px solid #FFF;
+    opacity: 0.6;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #FFF;
+    border-right: 1px solid #FFF;
+    padding: 5px 15px;
+    margin-bottom: -9px;
+    opacity: 0.6;
+}
+
+.second-nav-menu {
+    margin-top: 30px;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    color: #FFF;
+    border-radius: .25rem;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    background-color: transparent;
+    border: 1px solid #FFF;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.far,
+.fas,
+.fal,
+.fab {
+    color: #FFF;
+    font-family: fontAwesome;
+}
