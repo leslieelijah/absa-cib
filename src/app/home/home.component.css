@@ -1,17 +1,15 @@
 #flights {
     width: 100%;
-    height: 200px;
     margin-top: 40px;
-    background-color: #FFF;
     padding-left: 0px;
     padding-right: 0px;
 }
 
 .nav-tabs {
-    border-bottom: 2px solid #ac4147;
+    border-bottom: 3px solid #ac4147;
     padding-right: 0px;
     padding-left: 0px;
-    background-color: #505165;
+    /* background-color: #505165; */
     color: #FFF;
 }
 
@@ -22,18 +20,20 @@
     background-color: #ac4541;
     border-right: 1px solid #ac4147;
     border-color: transparent transparent #ac4541;
-    border-right: 1px solid #ac4147;
     color: #FFF;
+    border-right: 1px solid #FFF;
 }
 
 .nav-tabs .nav-link {
     border: 1px solid transparent;
     border-top-left-radius: 0rem;
     border-top-right-radius: 0rem;
+    background-color: #505165;
 }
 
 .tab-content {
     color: #000;
+    background-color: #FFF;
 }
 
 .far,

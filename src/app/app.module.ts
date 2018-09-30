@@ -12,7 +12,7 @@ import { FlightsComponent } from './flights/flights.component';
     AppComponent,
     HomeComponent,
     ContactComponent,
-    FlightsComponent
+    FlightsComponent,
   ],
   imports: [
     BrowserModule

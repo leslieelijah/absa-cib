@@ -10,7 +10,7 @@ html {
 
 #cib-wrap {
     background-image: url('/src/assets/images/absa-cib-banner.jpg');
-    height: 500px;
+    height: 768px;
     background-size: cover !important;
     background-repeat: no-repeat!important;
     background-position: right top!important;
@@ -60,4 +60,22 @@ html {
 
 .second-nav-menu h2 {
     color: #FFF;
+}
+
+#flights {
+    background: #FFF;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+#flights h1 {
+    font-size: 22px;
+}
+
+.dropdown-menu {
+    padding: .2rem .5rem;
+}
+
+.dropdown a {
+    margin-bottom: -9px;
 }
